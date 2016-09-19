@@ -1,29 +1,14 @@
-Vue.component('message', {
-  template: '<input v-model="message" @keyup.enter="saveMessage">',
-  data: function() {
-  return {
-      message: ''
-    }
-  },
-  methods: {
-    saveMessage: function() {
-      this.$emit('message-saved', this.message)
-
-      this.message = ""
-    }
-  }
-})
-
 new Vue({
-  el: 'body',
+  el: '#app',
   data: {
-    messages: []
+    message: 'Hello Vue.js!'
   },
   methods: {
-    handleMessage: function(message) {
-      this.messages.push(message)
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
     }
-    /*hadleMessageByButton: function(message) {
-      this.messages.push(message)*/
   }
 })
+Hello Vue.js!
+
+Reverse Message
