@@ -9,6 +9,4 @@ new Vue({
     }
   }
 })
-Hello Vue.js!
 
-Reverse Message
